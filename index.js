@@ -30,7 +30,7 @@ app.post('/upload', function(req, res) {
     }
 
     var bookname = req.files.book.name;
-    var bookpath = 'books/' + req.files.book.name;
+    var bookpath = __dirname + '/books/' + req.files.book.name;
 
     fs.renameSync(req.files.book.path, bookpath);
 
