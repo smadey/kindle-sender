@@ -1,0 +1,24 @@
+{
+  "name": "kindle-sender",
+  "version": "0.0.1",
+  "description": "Kindle sender",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smadey/kindle-sender.git"
+  },
+  "author": "Smadey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smadey/kindle-sender/issues"
+  },
+  "homepage": "https://github.com/smadey/kindle-sender#readme",
+  "dependencies": {
+    "connect-multiparty": "^2.0.0",
+    "express": "^4.13.3",
+    "nodemailer": "^1.4.0"
+  }
+}
