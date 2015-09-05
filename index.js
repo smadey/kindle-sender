@@ -37,7 +37,7 @@ app.post('/upload', function(req, res) {
     transport.sendMail({
         from: '<' + config.mailer.auth.user + '>',
         to: '<' + req.body.to + '>',
-        subject: '小说：' + bookname,
+        subject: 'Convert',
         attachments: [
             {
                 path: bookpath
