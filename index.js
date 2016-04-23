@@ -35,20 +35,20 @@ app.post('/upload', function(req, res) {
     fs.renameSync(req.files.book.path, bookpath);
 
     transport.sendMail({
-        from: '<' + config.mailer.auth.user + '>',
-        to: '<' + req.body.to + '>',
+        from: config.mailer.auth.user,
+        to: req.body.to,
         subject: 'Convert',
         attachments: [
             {
                 path: bookpath
             }
         ]
-    }, function(error, response) {
+    }, function(error, info) {
         if (error) {
             console.log('发送失败: ' + error);
         }
         else {
-            console.log('发送成功！');
+            console.log('发送成功: ' + info.response);
         }
 
         transport.close();
